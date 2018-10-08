@@ -1,11 +1,12 @@
 //npm modules
 var express = require('express');
-var path = require('path');
+//var path = require('path');
 var request = require('request');
 var cheerio = require('cheerio');
 var router = express.Router();
-var mongoose = require('mongoose');
-var Promise = require("bluebird");
+
+//var mongoose = require('mongoose');
+//var Promise = require("bluebird");
 
 //mongoDB models
 var Articles = require("../models/articles");
