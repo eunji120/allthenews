@@ -112,4 +112,16 @@ router.post('/addcomment/:id', function(req, res) {
     }); 
 });
 
+//deleting comment
+router.get('/deletecomment/:id', function(req, res) {
+    console.log(req.params.id)
+    Comments.remove({'_id': req.params.id}).exec(function(err, data) {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log("Comment deleted");
+        }
+    })
+});
+
 module.exports = router;

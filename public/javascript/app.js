@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     //setting up default variables
     var articleList = [];
-    var articleID = '';
+    var articleId = '';
     var article = '';
     var previousArticle = 0;
     var currentArticle = 0;
