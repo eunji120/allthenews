@@ -15,12 +15,13 @@ const cheerio = require("cheerio");
 
 //mongodb
 const mongoose = require('mongoose');
-mongoose.Promise = Promise;
+const mongojs = require("mongojs");
 //connecting to mongodb
 mongoose.connect("mongodb://localhost/5000", { useNewUrlParser: true });
 
-var URI = process.env.MONGODB_URI || "mongodb://localhost/allthenews1004";
-mongoose.connect(URI);
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/allthenews1004";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 //use morgan loggin
 app.use(logger("dev"));
